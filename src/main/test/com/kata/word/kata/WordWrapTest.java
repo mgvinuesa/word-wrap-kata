@@ -24,13 +24,10 @@ public class WordWrapTest {
 	@Test
 	public void no_divide_texto_menor_que_el_factor_de_division()
 	{
-		assertEquals("hello", wrap("hello", 8));  
+		Wrapper wrapper = new Wrapper();
+		assertEquals("hello", wrapper.wrap("hello", 8));  
 	}
 
-	private String wrap(String string, int i) {
-		return "hello";
-	}
-	
 
 	
 	
