@@ -4,9 +4,9 @@ public class Wrapper {
 
 	public String wrap(String text, int division) {
 		if(text.length() > division){
-			return "helloman\nuel";
+			return text.substring(0,division)+ "\n"  + text.substring(division);
 		}
-		return "hello";
+		return text;
 	}
 
 }
