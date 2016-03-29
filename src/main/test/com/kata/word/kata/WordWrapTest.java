@@ -27,6 +27,12 @@ public class WordWrapTest {
 		Wrapper wrapper = new Wrapper();
 		assertEquals("hello", wrapper.wrap("hello", 8));  
 	}
+	
+	@Test
+	public void divide_texto_mayor_que_el_factor_de_division(){
+		Wrapper wrapper = new Wrapper();
+		assertEquals("helloman\nuel", wrapper.wrap("hellomanuel", 8));  
+	}
 
 
 	
