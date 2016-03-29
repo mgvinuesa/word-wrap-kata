@@ -1,5 +1,9 @@
 package com.kata.word.kata;
 
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
 /*
  * TODO LIST
  * - Recortar por espacio
@@ -17,5 +21,17 @@ package com.kata.word.kata;
  */
 public class WordWrapTest {
 
+	@Test
+	public void no_divide_texto_menor_que_el_factor_de_division()
+	{
+		assertEquals("hello", wrap("hello", 8));  
+	}
+
+	private String wrap(String string, int i) {
+		return null;
+	}
+	
+
+	
 	
 }
