@@ -49,7 +49,10 @@ public class WordWrapTest {
 		assertEquals("hello\nboy", wrapper.wrap("hello boy", 5));  
 	}
 
-
+	@Test
+	public void solo_divide_por_espacios_si_es_mayor_que_el_factor_de_division(){
+		assertEquals("hi boy\nManuel", wrapper.wrap("hi boy Manuel", 8));		
+	}
 	
 	
 }
