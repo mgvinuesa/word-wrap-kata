@@ -59,4 +59,5 @@ public class WordWrapTest {
 	public void divide_texto_mayor_que_el_factor_de_division_o_por_espacios(){
 		assertEquals("helloman\nuel\nhi", wrapper.wrap("hellomanuel hi", 8));  
 	}
+
 }
