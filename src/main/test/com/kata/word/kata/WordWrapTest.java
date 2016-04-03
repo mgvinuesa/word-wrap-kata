@@ -33,7 +33,18 @@ public class WordWrapTest {
 		Wrapper wrapper = new Wrapper();
 		assertEquals("helloman\nuel", wrapper.wrap("hellomanuel", 8));  
 	}
+	
+	@Test
+	public void no_divide_texto_con_palabras_menor_que_el_factor_de_division(){
+		Wrapper wrapper = new Wrapper();
+		assertEquals("hi boy", wrapper.wrap("hi boy", 8));  
+	}
 
+	@Test
+	public void divide_texto_con_palabras_menor_que_el_factor_de_division(){
+		Wrapper wrapper = new Wrapper();
+		assertEquals("hello\nboy", wrapper.wrap("hello boy", 5));  
+	}
 
 	
 	
