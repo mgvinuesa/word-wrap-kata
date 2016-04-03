@@ -20,7 +20,7 @@ import org.junit.Test;
  * 		hello\nfrancisco->hel\no\nfra\n\nci...
  *
  */
-public class WordWrapTest {
+public class WrapperTest {
 
 	private Wrapper wrapper;
 	
