@@ -2,6 +2,7 @@ package com.kata.word.kata;
 
 import static org.junit.Assert.assertEquals;
 
+import org.junit.Before;
 import org.junit.Test;
 
 /*
@@ -21,30 +22,33 @@ import org.junit.Test;
  */
 public class WordWrapTest {
 
+	private Wrapper wrapper;
+	
+	@Before
+	public void setUp(){
+		this.wrapper = new Wrapper();
+	}
+	
 	@Test
-	public void no_divide_texto_menor_que_el_factor_de_division()
-	{
-		Wrapper wrapper = new Wrapper();
+	public void no_divide_texto_menor_que_el_factor_de_division(){
 		assertEquals("hello", wrapper.wrap("hello", 8));  
 	}
 	
 	@Test
 	public void divide_texto_mayor_que_el_factor_de_division(){
-		Wrapper wrapper = new Wrapper();
 		assertEquals("helloman\nuel", wrapper.wrap("hellomanuel", 8));  
 	}
 	
 	@Test
 	public void no_divide_texto_con_palabras_menor_que_el_factor_de_division(){
-		Wrapper wrapper = new Wrapper();
 		assertEquals("hi boy", wrapper.wrap("hi boy", 8));  
 	}
 
 	@Test
-	public void divide_texto_con_palabras_menor_que_el_factor_de_division(){
-		Wrapper wrapper = new Wrapper();
+	public void divide_texto_con_palabras_mayor_que_el_factor_de_division(){
 		assertEquals("hello\nboy", wrapper.wrap("hello boy", 5));  
 	}
+
 
 	
 	
