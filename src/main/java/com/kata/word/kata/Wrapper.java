@@ -7,8 +7,9 @@ public class Wrapper {
 	public String wrap(String text, int division) {
 		if (text.length() > division) {
 			int positionToSplit = division;
-			if (text.contains(" ")) {
-				positionToSplit = text.lastIndexOf(" ");
+			int positionWithSpace = text.lastIndexOf(" ");
+			if (positionWithSpace != -1) {
+				positionToSplit = positionWithSpace;
 			}
 			return text.substring(0, positionToSplit) + NEW_LINE + text.substring(positionToSplit).trim();
 		}
