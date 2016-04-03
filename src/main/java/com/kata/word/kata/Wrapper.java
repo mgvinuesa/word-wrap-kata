@@ -11,7 +11,7 @@ public class Wrapper {
 			if (positionWithSpace != -1) {
 				positionToSplit = positionWithSpace;
 			}
-			return text.substring(0, positionToSplit) + NEW_LINE + text.substring(positionToSplit).trim();
+			return this.wrap(text.substring(0, positionToSplit),division) + NEW_LINE + text.substring(positionToSplit).trim();
 		}
 		return text;
 	}
